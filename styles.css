@@ -7,17 +7,19 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;  /* Light, soft background */
     min-height: 100vh;
     position: relative;
     padding-bottom: 60px;
+    color: #2c3e50;  /* Dark blue-grey for text */
 }
 
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #3498db, #2980b9);  /* Attractive blue gradient */
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -28,48 +30,43 @@ nav a {
     color: white;
     text-decoration: none;
     margin: 0 1rem;
-    padding: 0.5rem;
-    transition: background-color 0.3s;
+    padding: 0.7rem 1.2rem;
+    transition: all 0.3s;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.1);
 }
 
 nav a:hover {
-    background-color: #555;
-    border-radius: 3px;
+    background-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
 .hero {
     padding: 3rem 1rem;
     text-align: center;
-    background-color: #fff;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
     margin: 2rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .hero h2 {
     margin-bottom: 1rem;
-    color: #333;
+    color: #2980b9;
 }
 
 .info {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .info h3 {
     margin-bottom: 1rem;
-    color: #333;
-}
-
-.info ol {
-    padding-left: 1.5rem;
-}
-
-.info li {
-    margin-bottom: 0.5rem;
+    color: #2980b9;
 }
 
 .products {
@@ -81,62 +78,65 @@ nav a:hover {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     margin-bottom: 3rem;
+    transition: all 0.3s;
+    border: 1px solid #e1e8ed;
 }
 
 .product:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .product h2 {
-    color: #333;
+    color: #2980b9;
     margin-bottom: 1rem;
 }
 
 .price {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #333;
+    color: #27ae60;  /* Pleasant green for prices */
     margin: 1rem 0;
 }
 
 .description {
-    color: #666;
+    color: #34495e;
     margin: 1rem 0;
 }
 
 .feature-list {
     padding: 1rem 2rem;
-    color: #444;
+    color: #34495e;
 }
 
 .feature-list li {
-    margin: 0.5rem 0;
-    line-height: 1.4;
+    margin: 0.7rem 0;
+    line-height: 1.5;
 }
 
 .payment-info {
-    background: #f8f8f8;
+    background: #f8f9fa;
     padding: 1.5rem;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-top: 1.5rem;
+    border: 1px solid #e1e8ed;
 }
 
 .payment-info h3 {
-    color: #333;
+    color: #2980b9;
     margin-bottom: 1rem;
 }
 
 code {
     display: block;
-    background: #333;
-    color: white;
+    background: #2c3e50;
+    color: #fff;
     padding: 1rem;
     margin: 1rem 0;
-    border-radius: 4px;
+    border-radius: 8px;
     word-wrap: break-word;
     font-family: monospace;
     font-size: 0.9rem;
@@ -145,11 +145,11 @@ code {
 .instructions {
     margin-top: 1rem;
     line-height: 1.8;
-    color: #555;
+    color: #34495e;
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -164,15 +164,10 @@ footer {
     }
     
     .hero {
-        margin: 1rem 0;
+        margin: 1rem;
     }
     
     .info {
         margin: 1rem;
-    }
-
-    code {
-        font-size: 0.8rem;
-        padding: 0.8rem;
     }
 }
