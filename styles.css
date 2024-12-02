@@ -123,29 +123,24 @@ nav a:hover {
    left: 0;
 }
 
-.verification-overlay {
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background: rgba(255, 255, 255, 0.95);
+.center-container {
    display: flex;
    justify-content: center;
    align-items: center;
-   z-index: 1000;
+   min-height: calc(100vh - 200px);
+   padding: 2rem;
 }
 
-.verify-container {
+.verify-form-container {
    background: white;
    padding: 2.5rem;
    border-radius: 10px;
    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
    max-width: 500px;
-   width: 90%;
+   width: 100%;
 }
 
-.verify-container h2 {
+.verify-form-container h2 {
    color: #2196F3;
    margin-bottom: 1.5rem;
    text-align: center;
@@ -248,7 +243,7 @@ footer {
        padding: 1.5rem;
    }
 
-   .verify-container {
+   .verify-form-container {
        margin: 1rem;
        padding: 1.5rem;
    }
