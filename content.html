@@ -14,52 +14,30 @@
         </nav>
     </header>
     
-    <div id="verification-overlay" class="verification-overlay">
-        <div class="verify-container">
-            <h2>Verify Payment to Access Content</h2>
-            <form class="verify-form" onsubmit="return verifyTransaction(event)">
-                <div class="form-group">
-                    <label for="txid">Bitcoin Transaction ID:</label>
-                    <input type="text" id="txid" required placeholder="Enter your transaction ID">
-                </div>
-                <button type="submit" class="submit-btn">Verify & Access Content</button>
-            </form>
+    <main class="content-main">
+        <div id="verification-overlay" class="verification-overlay">
+            <div class="verify-container">
+                <h2>Verify Your Payment</h2>
+                <form class="verify-form" onsubmit="return verifyTransaction(event)">
+                    <div class="form-group">
+                        <label for="txid">Enter Bitcoin Transaction ID:</label>
+                        <input type="text" id="txid" required placeholder="Paste your transaction ID here">
+                    </div>
+                    <button type="submit" class="submit-btn">Verify & Access Content</button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <main class="content-section blurred">
-        <section class="products">
-            <div class="product">
-                <h2>Meeting held in Harare - November 2024</h2>
-                <p class="description">Video and Audio conversation:</p>
-                <ul class="feature-list">
-                    <li>Sophia and ZANPF Closed Door meeting</li>
-                    <li>Exclusive photographs, documentation and video evidence</li>
-                </ul>
-            </div>
-
-            <div class="product">
-                <h2>Operation 2024 Documentation</h2>
-                <p class="description">Comprehensive package including:</p>
-                <ul class="feature-list">
-                    <li>Detailed analysis of regional political demographics</li>
-                    <li>Photographic and documentary evidence</li>
-                    <li>Meeting minutes from SWAPO offices</li>
-                    <li>Video and audio documentation</li>
-                    <li>ZANU-PF and SWAPO interaction records</li>
-                </ul>
-            </div>
-        </section>
     </main>
+
+    <footer>
+    </footer>
 
     <script>
         function verifyTransaction(event) {
             event.preventDefault();
             const txid = document.getElementById('txid').value.trim();
-            
-            if (txid.length > 0) {
-                document.getElementById('verification-overlay').style.display = 'none';
-                document.querySelector('.content-section').classList.remove('blurred');
+            if(txid.length > 0) {
+                window.location.href = 'verified-content.html';
             } else {
                 alert('Please enter a valid transaction ID');
             }
