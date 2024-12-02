@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electoral Documentation | Election Exposes</title>
+    <title>Content | Election Exposes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,32 +11,31 @@
         <h1>Election Exposes</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="content.html">Content</a>
         </nav>
     </header>
     
-    <main>
+    <div id="verification-overlay" class="verification-overlay">
+        <div class="verify-container">
+            <h2>Verify Payment to Access Content</h2>
+            <form class="verify-form" onsubmit="return verifyTransaction(event)">
+                <div class="form-group">
+                    <label for="txid">Bitcoin Transaction ID:</label>
+                    <input type="text" id="txid" required placeholder="Enter your transaction ID">
+                </div>
+                <button type="submit" class="submit-btn">Verify & Access Content</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="content-section blurred">
         <section class="products">
             <div class="product">
                 <h2>Meeting held in Harare - November 2024</h2>
-                <p class="description">Video and Audio documentation:</p>
+                <p class="description">Video and Audio conversation:</p>
                 <ul class="feature-list">
                     <li>Sophia and ZANPF Closed Door meeting</li>
-                    <li>Exclusive photographs and documentation</li>
-                    <li>Video evidence from the meeting</li>
-                    <li>Complete audio recordings</li>
+                    <li>Exclusive photographs, documentation and video evidence</li>
                 </ul>
-                <p class="price">Price: 1.5 BTC</p>
-                <div class="payment-info">
-                    <h3>Access Instructions:</h3>
-                    <p>Bitcoin Address:</p>
-                    <code>bc1q2p0mnusxd8rjzszpcuzvannehmmkp8rdh3uewj</code>
-                    <p class="instructions">
-                        1. Send exactly 1.500 BTC to address above<br>
-                        2. Forward transaction ID<br>
-                        3. Receive immediate access to downloads
-                    </p>
-                </div>
             </div>
 
             <div class="product">
@@ -49,22 +48,22 @@
                     <li>Video and audio documentation</li>
                     <li>ZANU-PF and SWAPO interaction records</li>
                 </ul>
-                <p class="price">Price: 3.500 BTC</p>
-                <div class="payment-info">
-                    <h3>Access Instructions:</h3>
-                    <p>Bitcoin Address:</p>
-                    <code>bc1q2p0mnusxd8rjzszpcuzvannehmmkp8rdh3uewj</code>
-                    <p class="instructions">
-                        1. Send exactly 3.500 BTC to address above<br>
-                        2. Forward transaction ID<br>
-                        3. Receive immediate access to downloads
-                    </p>
-                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-    </footer>
+    <script>
+        function verifyTransaction(event) {
+            event.preventDefault();
+            const txid = document.getElementById('txid').value.trim();
+            
+            if (txid.length > 0) {
+                document.getElementById('verification-overlay').style.display = 'none';
+                document.querySelector('.content-section').classList.remove('blurred');
+            } else {
+                alert('Please enter a valid transaction ID');
+            }
+        }
+    </script>
 </body>
 </html>
