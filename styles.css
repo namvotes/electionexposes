@@ -68,6 +68,158 @@ nav a:hover {
    font-size: 1.2rem;
 }
 
+.instructions-section {
+   padding: 2rem;
+}
+
+.instructions-container {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 2rem;
+   background: white;
+   border-radius: 10px;
+   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.instructions-container h3 {
+   color: #2196F3;
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 1.5rem;
+}
+
+.steps {
+   display: grid;
+   gap: 2rem;
+}
+
+.step {
+   padding: 1.5rem;
+   background: #f8f9fa;
+   border-radius: 8px;
+   border: 1px solid #e1e8ed;
+}
+
+.step h4 {
+   color: #2196F3;
+   margin-bottom: 1rem;
+}
+
+.step ul {
+   list-style: none;
+   padding-left: 0;
+}
+
+.step li {
+   margin: 0.5rem 0;
+   padding-left: 1.5rem;
+   position: relative;
+}
+
+.step li:before {
+   content: "•";
+   color: #2196F3;
+   position: absolute;
+   left: 0;
+}
+
+.contact-info {
+   display: inline-block;
+   background: #2c3e50;
+   color: white;
+   padding: 0.5rem 1rem;
+   border-radius: 4px;
+   margin: 0.5rem 0;
+}
+
+.products {
+   padding: 2rem;
+}
+
+.product {
+   background: white;
+   padding: 2rem;
+   margin: 2rem auto;
+   max-width: 800px;
+   border-radius: 10px;
+   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+   margin-bottom: 3rem;
+   transition: all 0.3s;
+   border: 1px solid #e1e8ed;
+}
+
+.product:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.product h2 {
+   color: #2196F3;
+   margin-bottom: 1rem;
+}
+
+.price {
+   font-size: 1.3rem;
+   font-weight: bold;
+   color: #27ae60;
+   margin: 1rem 0;
+}
+
+.description {
+   color: #555;
+   margin: 1rem 0;
+}
+
+.feature-list {
+   padding: 1rem 2rem;
+   color: #555;
+}
+
+.feature-list li {
+   margin: 0.7rem 0;
+   line-height: 1.5;
+   padding-left: 1.5rem;
+   position: relative;
+}
+
+.feature-list li:before {
+   content: "•";
+   color: #2196F3;
+   position: absolute;
+   left: 0;
+}
+
+.payment-info {
+   background: #f8f9fa;
+   padding: 1.5rem;
+   border-radius: 8px;
+   margin-top: 1.5rem;
+   border: 1px solid #e1e8ed;
+}
+
+.payment-info h3 {
+   color: #2196F3;
+   margin-bottom: 1rem;
+}
+
+code {
+   display: block;
+   background: #2c3e50;
+   color: #fff;
+   padding: 1rem;
+   margin: 1rem 0;
+   border-radius: 8px;
+   word-wrap: break-word;
+   font-family: monospace;
+   font-size: 0.9rem;
+}
+
+.instructions {
+   margin-top: 1rem;
+   line-height: 1.8;
+   color: #555;
+}
+
 .subscribe {
    padding: 2rem;
 }
@@ -128,95 +280,6 @@ nav a:hover {
    transform: translateY(-2px);
 }
 
-.products {
-   padding: 2rem;
-}
-
-.product {
-   background: white;
-   padding: 2rem;
-   margin: 2rem auto;
-   max-width: 800px;
-   border-radius: 10px;
-   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-   margin-bottom: 3rem;
-   transition: all 0.3s;
-   border: 1px solid #e1e8ed;
-}
-
-.product:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-.product h2 {
-   color: #2196F3;
-   margin-bottom: 1rem;
-}
-
-.price {
-   font-size: 1.3rem;
-   font-weight: bold;
-   color: #27ae60;
-   margin: 1rem 0;
-}
-
-.description {
-   color: #555;
-   margin: 1rem 0;
-}
-
-.feature-list {
-   padding: 1rem 2rem;
-   color: #555;
-   list-style-type: none;
-}
-
-.feature-list li {
-   margin: 0.7rem 0;
-   line-height: 1.5;
-   padding-left: 1.5rem;
-   position: relative;
-}
-
-.feature-list li:before {
-   content: "•";
-   color: #2196F3;
-   position: absolute;
-   left: 0;
-}
-
-.payment-info {
-   background: #f8f9fa;
-   padding: 1.5rem;
-   border-radius: 8px;
-   margin-top: 1.5rem;
-   border: 1px solid #e1e8ed;
-}
-
-.payment-info h3 {
-   color: #2196F3;
-   margin-bottom: 1rem;
-}
-
-code {
-   display: block;
-   background: #2c3e50;
-   color: #fff;
-   padding: 1rem;
-   margin: 1rem 0;
-   border-radius: 8px;
-   word-wrap: break-word;
-   font-family: monospace;
-   font-size: 0.9rem;
-}
-
-.instructions {
-   margin-top: 1rem;
-   line-height: 1.8;
-   color: #555;
-}
-
 footer {
    background: #2196F3;
    color: white;
@@ -255,6 +318,11 @@ footer {
        font-size: 1.5rem;
    }
 
+   .product {
+       margin: 1rem;
+       padding: 1.5rem;
+   }
+
    .subscribe-container {
        margin: 1rem;
        padding: 1.5rem;
@@ -268,12 +336,12 @@ footer {
        width: 100%;
    }
 
-   .product {
+   .instructions-container {
        margin: 1rem;
        padding: 1.5rem;
    }
 
-   .feature-list {
+   .step {
        padding: 1rem;
    }
 }
